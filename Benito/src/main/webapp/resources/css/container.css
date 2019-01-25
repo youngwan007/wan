@@ -1,0 +1,5 @@
+@charset "UTF-8";
+
+#wrap #container #content #main_slider { width:100% ;}
+#wrap #container #content #main_slider ul { height:615px; }
+#wrap #container #content #main_slider ul li { list-style: none; }
