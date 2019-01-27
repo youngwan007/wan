@@ -18,7 +18,7 @@
 				</c:if>
 				<c:if test="${!empty member}">
 					<li><a href="logout">LOGOUT</a></li>
-					<li><a href="#">MODIFY</a></li>
+					<li><a href="modifyForm">MODIFY</a></li>
 					<li><a href="#">MY PAGE</a></li>
 					<li><a href="#">ORDER</a></li>
 				</c:if>

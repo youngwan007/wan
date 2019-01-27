@@ -93,6 +93,19 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping("modifyForm")
+	public String modifyForm() {
+		
+		return "modifyForm";
+	}
+	
+	@RequestMapping(value = "modify",method = RequestMethod.POST)
+	public String modify(MemberDTO memberDto) {
+		
+		
+		
+		return "modifyForm";
+	}
 	
 	
 }
