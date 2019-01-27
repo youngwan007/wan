@@ -73,7 +73,7 @@ public class HomeController {
 	}
 	
 	
-	@RequestMapping("login")
+	@RequestMapping(value = "login",method = RequestMethod.POST)
 	public String login(MemberDTO memberDto, HttpSession session) {
 
 		MemberDTO mem = memberService.memberSearch(memberDto);
