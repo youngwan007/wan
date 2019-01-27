@@ -22,8 +22,8 @@
 					<h2>회원 로그인</h2><br>
 					<form action="login" name="loin_form" method="post">
 						<div id="input_info">
-							<input type="text" name="memberId" placeholder="아이디"><br>
-							<input type="password" name="memberPw" placeholder="비밀번호">
+							<input type="text" name="memId" placeholder="아이디"><br>
+							<input type="password" name="memPw" placeholder="비밀번호">
 							
 						</div>
 							<button type="submit" name="login_btn">로 그 인</button>

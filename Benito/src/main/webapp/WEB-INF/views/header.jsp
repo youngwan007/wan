@@ -1,5 +1,6 @@
 <link rel="stylesheet" type="text/css" href="./resources/css/header.css" />
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Vollkorn" />
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 		<div id="top">
 				<ul id="inner1">
@@ -7,12 +8,24 @@
 					<li><a href="#">CS CENTER</a></li>
 				</ul>
 				
+				
 				<ul id="inner2">
+				<c:if test="${empty member}">
 					<li><a href="loginForm">LOGIN</a></li>
 					<li><a href="joinForm">JOIN</a></li>
+					<li><a href="loginForm">MY PAGE</a></li>
+					<li><a href="loginForm">ORDER</a></li>
+				</c:if>
+				<c:if test="${!empty member}">
+					<li><a href="logout">LOGOUT</a></li>
+					<li><a href="#">MODIFY</a></li>
 					<li><a href="#">MY PAGE</a></li>
 					<li><a href="#">ORDER</a></li>
+				</c:if>
 				</ul>
+				
+				
+	
 		</div>
 		<div id="mid">
 				<div id="logo">

@@ -4,6 +4,8 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,6 +68,27 @@ public class HomeController {
 	@RequestMapping("join")
 	public String join(MemberDTO memberDto) {
 		memberService.memberRegister(memberDto);
+		
+		return "home";
+	}
+	
+	
+	@RequestMapping("login")
+	public String login(MemberDTO memberDto, HttpSession session) {
+
+		MemberDTO mem = memberService.memberSearch(memberDto);
+		
+		if(mem == null) {
+			return "loginForm";
+		}else {
+			session.setAttribute("member", mem);
+			return "home";
+		}
+	}
+	
+	@RequestMapping("logout")
+	public String logout(HttpSession session) {
+		session.invalidate();
 		
 		return "home";
 	}

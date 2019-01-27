@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page session="false"%>
+
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
@@ -29,7 +29,8 @@ $(document).ready(function(){
 
 	<div id="wrap">
 		<div id="header">
-			<%@ include file="header.jsp"%>
+		<c:import url="header.jsp"></c:import>
+			<%-- <%@ include file="header.jsp"%> --%>
 		</div>
 
 		<div id="container">

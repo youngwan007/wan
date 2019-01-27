@@ -26,4 +26,19 @@ public class MemberService implements IMemberService {
 
 	}
 
+	@Override
+	public MemberDTO memberSearch(MemberDTO memberDto) {
+		// TODO Auto-generated method stub
+		
+		MemberDTO mem = memberDao.memberSelect(memberDto);
+		
+		if(mem == null) {
+			System.out.println("login failed....");
+		}else {
+			System.out.println("login success!!!");
+		}
+		
+		return mem;
+	}
+
 }
