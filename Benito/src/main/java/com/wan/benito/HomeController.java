@@ -102,6 +102,13 @@ public class HomeController {
 	@RequestMapping(value = "modify",method = RequestMethod.POST)
 	public String modify(MemberDTO memberDto) {
 		
+		MemberDTO mem = memberService.memberCheck(memberDto);
+		
+		if(mem == null) {
+			
+		}else {
+			
+		}
 		
 		
 		return "modifyForm";

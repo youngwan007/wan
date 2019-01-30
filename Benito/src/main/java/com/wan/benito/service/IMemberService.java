@@ -6,6 +6,7 @@ public interface IMemberService {
 	
 	void memberRegister(MemberDTO memberDto);
 	MemberDTO memberSearch(MemberDTO memberDto);
+	MemberDTO memberCheck(MemberDTO memberDto);
 	
 
 }

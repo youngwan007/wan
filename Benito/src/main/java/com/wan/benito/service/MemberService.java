@@ -41,4 +41,14 @@ public class MemberService implements IMemberService {
 		return mem;
 	}
 
+	@Override
+	public MemberDTO memberCheck(MemberDTO memberDto) {
+		// TODO Auto-generated method stub
+		
+		
+		
+		
+		return null;
+	}
+
 }
