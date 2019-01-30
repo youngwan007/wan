@@ -77,4 +77,15 @@ public class MemberDao implements IMemberDao {
 		
 		return members.get(0);
 	}
+
+	@Override
+	public int memberUpdate(MemberDTO memberDto) {
+		// TODO Auto-generated method stub
+		
+		String sql = "INSERT INTO "
+		
+		int result = 
+		
+		return 0;
+	}
 }
