@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="./resources/css/modifyForm.css" />
+<link rel="stylesheet" type="text/css" href="./resources/css/joinForm.css" />
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
