@@ -68,6 +68,7 @@ public class HomeController {
 	
 	@RequestMapping("join")
 	public String join(MemberDTO memberDto) {
+		System.out.println(memberDto.getMemId());
 		memberService.memberRegister(memberDto);
 		
 		return "home";
@@ -100,9 +101,10 @@ public class HomeController {
 		return "modifyForm";
 	}
 	
-	@RequestMapping(value = "modify",method = RequestMethod.POST)
+	@RequestMapping(value = "modify")
 	public String modify(@RequestParam(value="newPw") String newPw, MemberDTO memberDto) {
 		
+		System.out.println(memberDto.getMemId());
 		memberService.memberModify(memberDto, newPw);
 		
 		return "modifyForm";

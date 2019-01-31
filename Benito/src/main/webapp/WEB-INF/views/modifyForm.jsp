@@ -35,7 +35,7 @@
 										<th class="ta-l required" aria-required="true">아이디</th>
 										<td>
 											<div class="txt_field"">
-												<input type="text" class="text" name="memId" id="memId" value="${member.getMemId() }" disabled>
+												<input type="text" class="text" name="memId" id="memId" value="${member.getMemId() }">
 											</div>
 										</td>
 									</tr>
