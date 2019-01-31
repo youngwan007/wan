@@ -79,13 +79,22 @@ public class MemberDao implements IMemberDao {
 	}
 
 	@Override
-	public int memberUpdate(MemberDTO memberDto) {
+	public int memberUpdate(final MemberDTO memberDto, final String newPw) {
 		// TODO Auto-generated method stub
 		
-		String sql = "INSERT INTO "
+		String sql = "UPDATE MEMBER set MEMPW = ? WHERE MEMID = ? ";
 		
-		int result = 
+		int result = jdbcTemplate.update(sql,new PreparedStatementSetter() {
+			
+			@Override
+			public void setValues(PreparedStatement ps) throws SQLException {
+				// TODO Auto-generated method stub
+				ps.setString(1, newPw);
+				ps.setString(2, memberDto.getMemId());
+				
+			}
+		});
 		
-		return 0;
+		return result;
 	}
 }

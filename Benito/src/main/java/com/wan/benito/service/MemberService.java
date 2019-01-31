@@ -42,18 +42,25 @@ public class MemberService implements IMemberService {
 	}
 
 	@Override
-	public MemberDTO memberCheck(MemberDTO memberDto) {
+	public MemberDTO memberModify(MemberDTO memberDto, String newPw) {
 		// TODO Auto-generated method stub
 		
 		// 1. 현재 비밀번호가 맞는지 체크
 		MemberDTO mem = memberDao.memberSelect(memberDto);
 		
-		// 2. 비밀번호 변경
+		if(mem == null) {
+			System.out.println("not found this member!!");
+			return mem;
+		}else {
+			int result = memberDao.memberUpdate(memberDto, newPw);
+			if(result == 0) {
+				System.out.println("modify Failed!!!!");
+				
+			}
+			
+			return mem;
+			
+		}
 		
-		
-		
-		
-		return null;
 	}
-
 }
