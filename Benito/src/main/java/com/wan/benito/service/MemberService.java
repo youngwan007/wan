@@ -41,4 +41,19 @@ public class MemberService implements IMemberService {
 		return mem;
 	}
 
+	@Override
+	public MemberDTO memberCheck(MemberDTO memberDto) {
+		// TODO Auto-generated method stub
+		
+		// 1. 현재 비밀번호가 맞는지 체크
+		MemberDTO mem = memberDao.memberSelect(memberDto);
+		
+		// 2. 비밀번호 변경
+		
+		
+		
+		
+		return null;
+	}
+
 }
