@@ -10,6 +10,7 @@
 #wrap #container #container_top #container_top_right .this { color: #3e3d3c; }
 #wrap #container #container_top h2 { float: left; padding: 0 0 0 3px; color: #111; font-size: 24px; }
 
+#wrap #container #side { width:210px; float: left; }
 #wrap #container #content { width:786px; margin: 0 auto; }
 
 #wrap #container #content #box legend { visibility: hidden;}
