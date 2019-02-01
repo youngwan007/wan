@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.wan.benito.DTO.MemberDTO;
 import com.wan.benito.service.MemberService;
@@ -67,6 +68,7 @@ public class HomeController {
 	
 	@RequestMapping("join")
 	public String join(MemberDTO memberDto) {
+		System.out.println(memberDto.getMemId());
 		memberService.memberRegister(memberDto);
 		
 		return "home";
@@ -99,18 +101,11 @@ public class HomeController {
 		return "modifyForm";
 	}
 	
-	@RequestMapping(value = "modify",method = RequestMethod.POST)
-	public String modify(MemberDTO memberDto) {
+	@RequestMapping(value = "modify")
+	public String modify(@RequestParam(value="newPw") String newPw, MemberDTO memberDto) {
 		
-		MemberDTO mem = memberService.memberCheck(memberDto);
-		
-		if(mem == null) {
-			
-			
-		}else {
-			
-		}
-		
+		System.out.println(memberDto.getMemId());
+		memberService.memberModify(memberDto, newPw);
 		
 		return "modifyForm";
 	}
