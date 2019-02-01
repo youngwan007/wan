@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="./resources/css/joinForm.css" />
+<link rel="stylesheet" type="text/css" href="./resources/css/modifyForm.css" />
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -13,6 +13,38 @@
 			<%@ include file="header.jsp"%>
 		</div>
 		<div id="container">
+			<div id="side">
+				<div id="myPage_side">
+					<h2>마이 페이지</h2>
+					<h3>쇼핑 정보</h3>
+					<ul>
+						<li>주문목록/배송조회</li>
+						<li>취소/교환/반품 내역</li>
+						<li>환불/입금 내역</li>
+						<li>찜리스트</li>
+					</ul>
+					<h3>혜택 관리</h3>
+					<ul>
+						<li>쿠폰</li>
+						<li>예치금</li>
+						<li>적립금</li>
+					</ul>
+					<h3>고객 센터</h3>
+					<ul>
+						<li>1:1 문의</li>
+					</ul>
+					<h3>회원정보</h3>
+					<ul>
+						<li>회원정보 변경</li>
+						<li>회원 탈퇴</li>
+						<li>배송지 관리</li>
+					</ul>
+					<h3>나의 상품문의</h3>
+					<h3>나의 상품후기</h3>
+				
+				
+				</div>
+			</div>
 			<div id="container_top">
 					<h2>회원 정보 변경</h2>
 					
